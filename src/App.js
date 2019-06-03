@@ -1,10 +1,10 @@
 import React from 'react';
 
-import './App.css';
+import styles from './App.module.scss';
 
 const App = () => {
   return (
-    <div className="App">
+    <div className={styles.App}>
       <h1>Let's workout</h1>
     </div>
   );
