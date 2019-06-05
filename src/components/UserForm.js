@@ -3,6 +3,13 @@ import UserInfo from './UserInfo';
 import WorkoutType from './WorkoutType';
 import ExerciseNumber from './ExerciseNumber';
 
+import abs from '../../data/abs';
+import legs from '../../data/legs';
+import arms from '../../data/arms';
+import shoulders from '../../data/shoulders';
+import chest from '../../data/chest';
+import back from '../../data/back';
+
 export class UserForm extends Component {
   constructor(props) {
     super(props);
@@ -39,7 +46,7 @@ export class UserForm extends Component {
   render() {
     const { step, name, workoutType, exerciseNumber, workout } = this.state;
     const values = { name, workoutType, exerciseNumber, workout };
-
+    console.log(chest);
     switch (step) {
       case 1:
         return (

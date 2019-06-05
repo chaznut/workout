@@ -52,3 +52,5 @@ const back = [
     name: 'Rope Face Pull'
   }
 ];
+
+module.exports = back;

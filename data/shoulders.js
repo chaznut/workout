@@ -36,3 +36,5 @@ const shoulders = [
     name: 'Reverse Pec-Dec'
   }
 ];
+
+module.exports = shoulders;
