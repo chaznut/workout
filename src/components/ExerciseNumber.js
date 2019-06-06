@@ -4,6 +4,9 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import RaisedButton from 'material-ui/RaisedButton';
+import { ThemeProvider } from '@material-ui/styles';
+
+import theme from '../theme';
 
 export class ExerciseNumber extends Component {
   continue = e => {
@@ -20,7 +23,7 @@ export class ExerciseNumber extends Component {
     const { values, handleChange } = this.props;
 
     return (
-      <MuiThemeProvider>
+      <MuiThemeProvider theme={theme}>
         <div>
           <InputLabel htmlFor="age-simple">Select # of exercises</InputLabel>
           <Select
