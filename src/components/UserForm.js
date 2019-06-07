@@ -45,6 +45,26 @@ export class UserForm extends Component {
     });
   };
 
+  shuffle = workoutArray => {
+    const { workoutType } = this.state;
+
+    if (workoutType === 'Chest') workoutArray = chest;
+    if (workoutType === 'Back') workoutArray = back;
+    if (workoutType === 'Shoulders') workoutArray = shoulders;
+    if (workoutType === 'Arms') workoutArray = arms;
+    if (workoutType === 'Legs') workoutArray = legs;
+    if (workoutType === 'Abs') workoutArray = abs;
+
+    const mapNames = workoutArray.map(workout => workout.name);
+
+    for (let i = mapNames.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [mapNames[i], mapNames[j]] = [mapNames[j], mapNames[i]];
+    }
+    const shuffledWorkout = workouts.slice(0, this.state.exerciseNumber);
+    this.setState({ workout: shuffledWorkout });
+  };
+
   handleSubmit = () => {
     const { workoutType, exerciseNumber } = this.state;
 
@@ -143,6 +163,7 @@ export class UserForm extends Component {
             name={this.state.name}
             workout={this.state.workout}
             handleSubmit={this.handleSubmit}
+            onClick={() => this.shuffle(this.state.workoutType)}
           />
         );
     }

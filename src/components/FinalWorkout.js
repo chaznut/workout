@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { List, ListItem } from 'material-ui/List';
-
+import RaisedButton from 'material-ui/RaisedButton';
 export class FinalWorkout extends Component {
   componentDidMount() {
     this.props.handleSubmit();
@@ -20,6 +20,11 @@ export class FinalWorkout extends Component {
               />
             ))}
           </List>
+          <RaisedButton
+            label="Shuffle"
+            default={true}
+            onClick={this.props.onClick}
+          />
         </div>
       </MuiThemeProvider>
     );
