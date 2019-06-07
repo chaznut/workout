@@ -61,7 +61,7 @@ export class UserForm extends Component {
       const j = Math.floor(Math.random() * (i + 1));
       [mapNames[i], mapNames[j]] = [mapNames[j], mapNames[i]];
     }
-    const shuffledWorkout = workouts.slice(0, this.state.exerciseNumber);
+    const shuffledWorkout = mapNames.slice(0, this.state.exerciseNumber);
     this.setState({ workout: shuffledWorkout });
   };
 
