@@ -36,3 +36,5 @@ const arms = [
     name: 'Tricep Kickback'
   }
 ];
+
+module.exports = arms;

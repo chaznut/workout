@@ -48,3 +48,5 @@ const legs = [
     name: 'Hack Squat'
   }
 ];
+
+module.exports = legs;

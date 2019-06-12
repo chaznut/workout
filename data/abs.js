@@ -36,3 +36,5 @@ const abs = [
     name: 'Bicycle Crunch'
   }
 ];
+
+module.exports = abs;

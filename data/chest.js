@@ -52,3 +52,5 @@ const chest = [
     name: 'Dumbbell Pullover'
   }
 ];
+
+module.exports = chest;
