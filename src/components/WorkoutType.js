@@ -3,7 +3,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
 
 export class WorkoutType extends Component {
   continue = e => {
@@ -38,12 +38,15 @@ export class WorkoutType extends Component {
             <MenuItem value="Abs">Abs</MenuItem>
           </Select>
           <br />
-          <RaisedButton
-            label="Continue"
-            primary={true}
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
             style={styles.button}
             onClick={this.continue}
-          />
+          >
+            Continue
+          </Button>
         </div>
       </MuiThemeProvider>
     );
