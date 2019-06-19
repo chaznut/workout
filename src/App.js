@@ -1,12 +1,12 @@
 import React from 'react';
 import UserForm from './components/UserForm';
-
+import logo from '../assets/logo.png';
 import styles from './App.module.scss';
 
 const App = () => {
   return (
     <div className={styles.App}>
-      <img src="https://i.imgur.com/ozG3WX6.png" alt="Flexed Arm" width="200" />
+      <img src={logo} alt="Flexed Arm" width="175" />
       <h1>ShuffleFit</h1>
       <UserForm />
     </div>

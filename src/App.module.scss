@@ -15,9 +15,58 @@ body {
   grid-template-columns: 1fr;
   align-items: center;
   justify-items: center;
-  grid-template-rows: 1fr 1fr 2fr;
+  // grid-template-rows: 1fr 1fr 2fr;
 }
 
 .MuiButtonBase-root {
   color: #666666 !important;
+}
+
+input {
+  color: #fff !important;
+  font-size: 25px !important;
+}
+
+label {
+  font-size: 22px !important;
+}
+
+span {
+  padding: 0px;
+}
+
+ul,
+button {
+  background-color: rgb(0, 188, 212) !important;
+}
+
+button {
+  padding: 20px 40px !important;
+}
+
+h1 {
+  letter-spacing: 2px;
+  font-size: 50px;
+  padding-bottom: 0px !important;
+}
+
+.workoutContainer {
+  margin-top: -20px !important;
+}
+
+img {
+  margin-bottom: -20px;
+}
+
+@media only screen and (max-height: 700px) {
+  img {
+    display: none;
+  }
+  span {
+    padding: 0px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
 }
