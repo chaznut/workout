@@ -4,14 +4,12 @@ import WorkoutType from './WorkoutType';
 import ExerciseNumber from './ExerciseNumber';
 import FinalWorkout from './FinalWorkout';
 
-import abs from '../../data/abs';
-import legs from '../../data/legs';
-import arms from '../../data/arms';
-import shoulders from '../../data/shoulders';
-import chest from '../../data/chest';
-import back from '../../data/back';
-
-// import shuffler from '../../util/shuffler';
+import abs from '../data/abs';
+import legs from '../data/legs';
+import arms from '../data/arms';
+import shoulders from '../data/shoulders';
+import chest from '../data/chest';
+import back from '../data/back';
 
 export class UserForm extends Component {
   constructor(props) {
@@ -70,60 +68,60 @@ export class UserForm extends Component {
     let exerciseTempArray = [];
     let i = 0;
     if (workoutType === 'Chest') {
-      while( i < exerciseNumber ) {
+      while (i < exerciseNumber) {
         let exercise = chest[Math.floor(Math.random() * chest.length)];
-        if(!this.checkDups(exerciseTempArray, exercise.name)){
+        if (!this.checkDups(exerciseTempArray, exercise.name)) {
           exerciseTempArray = exerciseTempArray.concat(exercise.name);
           i++;
         }
       }
     } else if (workoutType === 'Back') {
-      while( i < exerciseNumber ) {
+      while (i < exerciseNumber) {
         let exercise = back[Math.floor(Math.random() * back.length)];
-        if(!this.checkDups(exerciseTempArray, exercise.name)){
+        if (!this.checkDups(exerciseTempArray, exercise.name)) {
           exerciseTempArray = exerciseTempArray.concat(exercise.name);
           i++;
         }
       }
     } else if (workoutType === 'Shoulders') {
-      while( i < exerciseNumber ) {
+      while (i < exerciseNumber) {
         let exercise = shoulders[Math.floor(Math.random() * shoulders.length)];
-        if(!this.checkDups(exerciseTempArray, exercise.name)){
+        if (!this.checkDups(exerciseTempArray, exercise.name)) {
           exerciseTempArray = exerciseTempArray.concat(exercise.name);
           i++;
         }
       }
     } else if (workoutType === 'Legs') {
-      while( i < exerciseNumber ) {
+      while (i < exerciseNumber) {
         let exercise = legs[Math.floor(Math.random() * legs.length)];
-        if(!this.checkDups(exerciseTempArray, exercise.name)){
+        if (!this.checkDups(exerciseTempArray, exercise.name)) {
           exerciseTempArray = exerciseTempArray.concat(exercise.name);
           i++;
         }
       }
     } else if (workoutType === 'Arms') {
-      while( i < exerciseNumber ) {
+      while (i < exerciseNumber) {
         let exercise = arms[Math.floor(Math.random() * arms.length)];
-        if(!this.checkDups(exerciseTempArray, exercise.name)){
+        if (!this.checkDups(exerciseTempArray, exercise.name)) {
           exerciseTempArray = exerciseTempArray.concat(exercise.name);
           i++;
         }
       }
-    } else {    
-      while( i < exerciseNumber ) {
+    } else {
+      while (i < exerciseNumber) {
         let exercise = abs[Math.floor(Math.random() * abs.length)];
-        if(!this.checkDups(exerciseTempArray, exercise.name)){
+        if (!this.checkDups(exerciseTempArray, exercise.name)) {
           exerciseTempArray = exerciseTempArray.concat(exercise.name);
           i++;
         }
       }
     }
     this.setState({
-      workout: exerciseTempArray,
-    }); 
+      workout: exerciseTempArray
+    });
   };
 
-  checkDups(arr, exercise){
+  checkDups(arr, exercise) {
     return arr.includes(exercise) ? 1 : 0;
   }
 
@@ -168,6 +166,8 @@ export class UserForm extends Component {
             onClick={() => this.shuffle(this.state.workoutType)}
           />
         );
+      default:
+        return null;
     }
   }
 }
