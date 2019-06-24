@@ -1,6 +1,6 @@
 import React from 'react';
 import UserForm from './components/UserForm';
-import logo from '../assets/logo.png';
+import logo from './assets/logo.png';
 import styles from './App.module.scss';
 
 const App = () => {
