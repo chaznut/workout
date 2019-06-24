@@ -47,6 +47,7 @@ h1 {
   letter-spacing: 2px;
   font-size: 50px;
   padding-bottom: 0px !important;
+  display: inline-block;
 }
 
 .workoutContainer {
@@ -54,13 +55,11 @@ h1 {
 }
 
 img {
-  margin-bottom: -20px;
+  display: inline-block;
+  transform: rotate(-45deg);
 }
 
 @media only screen and (max-height: 700px) {
-  img {
-    display: none;
-  }
   span {
     padding: 0px;
   }

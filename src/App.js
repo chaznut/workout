@@ -6,8 +6,10 @@ import styles from './App.module.scss';
 const App = () => {
   return (
     <div className={styles.App}>
-      <img src={logo} alt="Flexed Arm" width="175" />
-      <h1>ShuffleFit</h1>
+      <div>
+        <h1>ShuffleFit</h1>
+        <img src={logo} alt="Flexed Arm" width="50" />
+      </div>
       <UserForm />
     </div>
   );
