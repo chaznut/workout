@@ -6,8 +6,6 @@ import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
 import { ThemeProvider } from '@material-ui/styles';
 
-import theme from '../theme';
-
 export class ExerciseNumber extends Component {
   continue = e => {
     e.preventDefault();
@@ -23,35 +21,24 @@ export class ExerciseNumber extends Component {
     const { values, handleChange } = this.props;
 
     return (
-      <MuiThemeProvider theme={theme}>
-        <div>
-          <InputLabel htmlFor="age-simple">Select # of exercises</InputLabel>
-          <Select
-            value={values.exerciseNumber}
-            onChange={handleChange('exerciseNumber')}
-          >
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
-            <MenuItem value="1">One</MenuItem>
-            <MenuItem value="2">Two</MenuItem>
-            <MenuItem value="3">Three</MenuItem>
-            <MenuItem value="4">Four</MenuItem>
-            <MenuItem value="5">Five</MenuItem>
-            <MenuItem value="6">Six</MenuItem>
-          </Select>
-          <br />
-          <Button
-            variant="contained"
-            color="primary"
-            label="Continue"
-            style={styles.button}
-            onClick={this.continue}
-          >
-            Continue
-          </Button>
-        </div>
-      </MuiThemeProvider>
+      <div>
+        <label htmlFor="age-simple">Select # of exercises</label>
+        <select
+          value={values.exerciseNumber}
+          onChange={handleChange('exerciseNumber')}
+        >
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+          <option value="4">Four</option>
+          <option value="5">Five</option>
+          <option value="6">Six</option>
+        </select>
+
+        <button label="Continue" style={styles.button} onClick={this.continue}>
+          Continue
+        </button>
+      </div>
     );
   }
 }

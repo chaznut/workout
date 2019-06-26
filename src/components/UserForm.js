@@ -17,8 +17,8 @@ export class UserForm extends Component {
     this.state = {
       step: 1,
       name: '',
-      workoutType: '',
-      exerciseNumber: 0,
+      workoutType: 'Chest',
+      exerciseNumber: 1,
       workout: []
     };
   }
@@ -64,61 +64,9 @@ export class UserForm extends Component {
   };
 
   handleSubmit = () => {
-    const { workoutType, exerciseNumber } = this.state;
-    let exerciseTempArray = [];
-    let i = 0;
-    if (workoutType === 'Chest') {
-      while (i < exerciseNumber) {
-        let exercise = chest[Math.floor(Math.random() * chest.length)];
-        if (!this.checkDups(exerciseTempArray, exercise.name)) {
-          exerciseTempArray = exerciseTempArray.concat(exercise.name);
-          i++;
-        }
-      }
-    } else if (workoutType === 'Back') {
-      while (i < exerciseNumber) {
-        let exercise = back[Math.floor(Math.random() * back.length)];
-        if (!this.checkDups(exerciseTempArray, exercise.name)) {
-          exerciseTempArray = exerciseTempArray.concat(exercise.name);
-          i++;
-        }
-      }
-    } else if (workoutType === 'Shoulders') {
-      while (i < exerciseNumber) {
-        let exercise = shoulders[Math.floor(Math.random() * shoulders.length)];
-        if (!this.checkDups(exerciseTempArray, exercise.name)) {
-          exerciseTempArray = exerciseTempArray.concat(exercise.name);
-          i++;
-        }
-      }
-    } else if (workoutType === 'Legs') {
-      while (i < exerciseNumber) {
-        let exercise = legs[Math.floor(Math.random() * legs.length)];
-        if (!this.checkDups(exerciseTempArray, exercise.name)) {
-          exerciseTempArray = exerciseTempArray.concat(exercise.name);
-          i++;
-        }
-      }
-    } else if (workoutType === 'Arms') {
-      while (i < exerciseNumber) {
-        let exercise = arms[Math.floor(Math.random() * arms.length)];
-        if (!this.checkDups(exerciseTempArray, exercise.name)) {
-          exerciseTempArray = exerciseTempArray.concat(exercise.name);
-          i++;
-        }
-      }
-    } else {
-      while (i < exerciseNumber) {
-        let exercise = abs[Math.floor(Math.random() * abs.length)];
-        if (!this.checkDups(exerciseTempArray, exercise.name)) {
-          exerciseTempArray = exerciseTempArray.concat(exercise.name);
-          i++;
-        }
-      }
-    }
-    this.setState({
-      workout: exerciseTempArray
-    });
+    const { workoutType } = this.state;
+
+    this.shuffle(workoutType);
   };
 
   checkDups(arr, exercise) {

@@ -2,7 +2,7 @@
 
 body {
   background-color: #f0805b;
-  color: #fff;
+
   font-family: 'Open Sans', sans-serif;
   height: 100vh;
   display: flex;
@@ -17,30 +17,20 @@ body {
   justify-items: center;
 }
 
-.MuiButtonBase-root {
-  color: #666666 !important;
-}
-
 input {
-  color: #fff !important;
   font-size: 25px !important;
 }
 
 label {
-  font-size: 22px !important;
-}
-
-span {
-  padding: 0px;
-}
-
-ul,
-button {
-  background-color: rgb(0, 188, 212) !important;
+  font-size: 22px;
 }
 
 button {
-  padding: 20px 40px !important;
+  background-color: rgb(0, 188, 212);
+}
+
+button {
+  padding: 20px 40px;
 }
 
 h1 {
@@ -57,6 +47,14 @@ h1 {
 img {
   display: inline-block;
   transform: rotate(-45deg);
+}
+
+select {
+  background-color: white;
+}
+
+li {
+  color: black;
 }
 
 @media only screen and (max-height: 700px) {
