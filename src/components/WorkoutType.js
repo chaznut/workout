@@ -32,6 +32,7 @@ export class WorkoutType extends Component {
         <button style={styles.button} onClick={this.continue}>
           Continue
         </button>
+        <button style={styles.button} onClick={this.back}>Back</button>
       </div>
     );
   }

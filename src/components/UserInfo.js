@@ -7,12 +7,16 @@ export class UserInfo extends Component {
   };
 
   render() {
-    const { values, handleChange } = this.props;
+    const { values, handleChange, buttonDisabled } = this.props;
 
     return (
       <div>
         <input placeholder="Enter Your Name" onChange={handleChange('name')} />
-        <button style={styles.button} onClick={this.continue}>
+        <button
+          disabled={buttonDisabled}
+          style={styles.button}
+          onClick={this.continue}
+        >
           Continue
         </button>
       </div>

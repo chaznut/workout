@@ -1,11 +1,15 @@
 const arms = [
   {
     type: 'compound',
-    name: 'Barbell Curl'
+    name: 'Barbell Curl',
+    url: '/barbell-curl',
+    videoUrl: 'https://www.bodybuilding.com/exercises/barbell-curl'
   },
   {
     type: 'compound',
-    name: 'Skull Crusher'
+    name: 'Skull Crusher',
+    url: '/skull-crusher',
+    videoUrl: 'https://www.bodybuilding.com/exercises/skull-crusher'
   },
   {
     type: 'compound',

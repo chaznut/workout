@@ -17,6 +17,9 @@ export class FinalWorkout extends Component {
         <button className="shuffleButton" onClick={this.props.onClick}>
           Shuffle
         </button>
+        <button className="shuffleButton" onClick={this.props.handleReset}>
+          Reset
+        </button>
       </div>
     );
   }

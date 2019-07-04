@@ -3,6 +3,8 @@ import UserForm from './components/UserForm';
 import logo from './assets/logo.png';
 import styles from './App.module.scss';
 
+import Arms from './data/arms';
+
 const App = () => {
   return (
     <div className={styles.App}>

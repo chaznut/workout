@@ -38,6 +38,9 @@ export class ExerciseNumber extends Component {
         <button label="Continue" style={styles.button} onClick={this.continue}>
           Continue
         </button>
+        <button label="Continue" style={styles.button} onClick={this.back}>
+          Back
+        </button>
       </div>
     );
   }

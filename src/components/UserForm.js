@@ -37,6 +37,16 @@ export class UserForm extends Component {
     });
   };
 
+  handleReset = () => {
+    this.setState({
+      step: 1,
+      name: '',
+      workoutType: 'Chest',
+      exerciseNumber: 1,
+      workout: []
+    });
+  };
+
   handleChange = input => e => {
     this.setState({
       [input]: e.target.value
@@ -81,6 +91,7 @@ export class UserForm extends Component {
       case 1:
         return (
           <UserInfo
+            buttonDisabled={name === '' ? true : false}
             nextStep={this.nextStep}
             handleChange={this.handleChange}
             values={values}
@@ -112,6 +123,7 @@ export class UserForm extends Component {
             workout={this.state.workout}
             handleSubmit={this.handleSubmit}
             onClick={() => this.shuffle(this.state.workoutType)}
+            handleReset={this.handleReset}
           />
         );
       default:
