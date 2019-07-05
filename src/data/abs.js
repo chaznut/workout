@@ -1,39 +1,51 @@
 const abs = [
   {
     type: 'compound',
-    name: 'Hanging Leg Raise'
+    name: 'Hanging Leg Raise',
+    url: '/hanging-leg-raise',
+    videoUrl: 'https://www.youtube.com/embed/Nw0LOKe3_l8'
   },
   {
     type: 'compound',
-    name: 'Cable Crunch'
+    name: 'Cable Crunch',
+    url: '/cable-crunch',
+    videoUrl: 'https://www.youtube.com/embed/3qjoXDTuyOE'
   },
   {
     type: 'compound',
-    name: 'Roman Chair'
+    name: 'Sit Up',
+    url: '/sit-up',
+    videoUrl: 'https://www.youtube.com/embed/10mp1wusuzM'
   },
   {
     type: 'compound',
-    name: 'Ab-wheel Rollout'
+    name: 'Ab Rollout',
+    url: '/ab-rollout',
+    videoUrl: 'https://www.youtube.com/embed/Q5MT5omGNJI'
   },
   {
     type: 'accessory',
-    name: 'Sit-ups'
+    name: 'Plank',
+    url: '/plank',
+    videoUrl: 'https://www.youtube.com/embed/tgbrMdfuGJA'
   },
   {
     type: 'accessory',
-    name: 'Plank'
+    name: 'V-Sits',
+    url: 'v-sit',
+    videoUrl: 'https://www.youtube.com/embed/ilYxtS9z_wA'
   },
   {
     type: 'accessory',
-    name: 'V-Sits'
+    name: 'Reverse Crunch',
+    url: '/reverse-crunch',
+    videoUrl: 'https://www.youtube.com/embed/lmSP-c1X_iY'
   },
   {
     type: 'accessory',
-    name: 'Reverse Crunch'
-  },
-  {
-    type: 'accessory',
-    name: 'Bicycle Crunch'
+    name: 'Bicycle Crunch',
+    url: '/bicycle-crunch',
+    videoUrl: 'https://www.youtube.com/embed/i6mPCVUrtNk'
   }
 ];
 

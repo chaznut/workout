@@ -1,39 +1,51 @@
 const shoulders = [
   {
     type: 'compound',
-    name: 'Barbell Overhead Press'
+    name: 'Barbell Overhead Press',
+    url: '/barbell-overhead-press',
+    videoUrl: 'https://www.youtube.com/embed/lPFwcHl0a2c'
   },
   {
     type: 'compound',
-    name: 'Dumbbell Military Press'
+    name: 'Dumbbell Shoulder Press',
+    url: '/dumbbell-shoulder-press',
+    videoUrl: 'https://www.youtube.com/embed/0JfYxMRsUCQ'
   },
   {
     type: 'compound',
-    name: 'Arnold Press'
+    name: 'Arnold Press',
+    url: '/arnold-press',
+    videoUrl: 'https://www.youtube.com/embed/X60-yTMOJfw'
   },
   {
     type: 'compound',
-    name: 'Barbell Upright Row'
+    name: 'Barbell Upright Row',
+    url: '/barbell-upright-row',
+    videoUrl: 'https://www.youtube.com/embed/KzYlXWXVw3o'
   },
   {
     type: 'accessory',
-    name: 'Front Raise'
+    name: 'Lateral Raise',
+    url: '/lateral-raise',
+    videoUrl: 'https://www.youtube.com/embed/E3abEP8SIh0'
   },
   {
     type: 'accessory',
-    name: 'Lateral Raise'
+    name: 'Rear Delt Fly',
+    url: '/rear-delt-fly',
+    videoUrl: 'https://www.youtube.com/embed/WCvRMULhUVU'
   },
   {
     type: 'accessory',
-    name: 'Rear Delt Fly'
+    name: 'Dumbbell Shrug',
+    url: '/dumbbell-shrug',
+    videoUrl: 'https://www.youtube.com/embed/8lP_eJvClSA'
   },
   {
     type: 'accessory',
-    name: 'Dumbbell Shrug'
-  },
-  {
-    type: 'accessory',
-    name: 'Reverse Pec-Dec'
+    name: 'Face Pull',
+    url: '/face-pull',
+    videoUrl: 'https://www.youtube.com/embed/tkLTR4b6cAk'
   }
 ];
 

@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import Select from '@material-ui/core/Select';
-import Button from '@material-ui/core/Button';
-import { ThemeProvider } from '@material-ui/styles';
+
 
 export class ExerciseNumber extends Component {
   continue = e => {
