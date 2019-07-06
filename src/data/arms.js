@@ -3,7 +3,7 @@ const arms = [
     type: 'compound',
     name: 'Barbell Curl',
     url: '/barbell-curl',
-    videoUrl: 'https://www.bodybuilding.com/exercises/barbell-curl'
+    videoUrl: 'https://www.youtube.com/embed/dDI8ClxRS04'
   },
   {
     type: 'compound',
