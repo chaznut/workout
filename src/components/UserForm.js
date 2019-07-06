@@ -63,7 +63,7 @@ export class UserForm extends Component {
     if (workoutType === 'Legs') workoutArray = legs;
     if (workoutType === 'Abs') workoutArray = abs;
 
-    const mapNames = workoutArray.map(workout => workout.name);
+    const mapNames = workoutArray.map(workout => workout);
 
     for (let i = mapNames.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));

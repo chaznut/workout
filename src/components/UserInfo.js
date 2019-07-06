@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class UserInfo extends Component {
+class UserInfo extends Component {
   continue = e => {
     e.preventDefault();
     this.props.nextStep();
