@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import Exercise from './Exercise';
+import { Link } from 'react-router-dom';
 
 export class FinalWorkout extends Component {
   componentDidMount() {
-    this.props.handleSubmit();
+    if (this.props.workoutArray.length === 0) {
+      this.props.handleSubmit();
+    }
   }
 
   render() {
@@ -23,9 +26,11 @@ export class FinalWorkout extends Component {
         <button className="shuffleButton" onClick={this.props.onClick}>
           Shuffle
         </button>
-        <button className="shuffleButton" onClick={this.props.handleReset}>
-          Reset
-        </button>
+        <Link to="/">
+          <button className="shuffleButton" onClick={this.props.handleReset}>
+            Reset
+          </button>
+        </Link>
       </div>
     );
   }

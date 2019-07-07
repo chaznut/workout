@@ -1,16 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export class WorkoutType extends Component {
-  continue = e => {
-    e.preventDefault();
-    this.props.nextStep();
-  };
-
-  back = e => {
-    e.preventDefault();
-    this.props.prevStep();
-  };
-
   render() {
     const { values, handleChange } = this.props;
 
@@ -29,10 +20,16 @@ export class WorkoutType extends Component {
           <option value="Abs">Abs</option>
         </select>
         <br />
-        <button style={styles.button} onClick={this.continue}>
-          Continue
-        </button>
-        <button style={styles.button} onClick={this.back}>Back</button>
+        <Link to="/">
+          <button style={styles.button} onClick={this.back}>
+            Back
+          </button>
+        </Link>
+        <Link to="/exerciseNumber">
+          <button style={styles.button} onClick={this.continue}>
+            Continue
+          </button>
+        </Link>
       </div>
     );
   }

@@ -5,7 +5,7 @@ const ExerciseDetail = props => (
   <div>
     <h3>{props.location.state.videoInfo.name}</h3>
     <iframe src={props.location.state.videoInfo.videoUrl} frameBorder="0" />
-    <button onClick={() => props.history.goBack()} />
+    <button onClick={() => props.history.goBack()}>Back</button>
   </div>
 );
 
