@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import UserInfo from './components/UserInfo';
@@ -16,6 +16,7 @@ import arms from './data/arms';
 import shoulders from './data/shoulders';
 import chest from './data/chest';
 import back from './data/back';
+import Exercise from './components/Exercise';
 
 export class App extends Component {
   constructor(props) {
@@ -88,7 +89,7 @@ export class App extends Component {
     return arr.includes(exercise) ? 1 : 0;
   }
   render() {
-    const { step, name, workoutType, exerciseNumber, workout } = this.state;
+    const { name, workoutType, exerciseNumber, workout } = this.state;
     const values = { name, workoutType, exerciseNumber, workout };
     return (
       <Router>
@@ -97,6 +98,7 @@ export class App extends Component {
             <h1>ShuffleFit</h1>
             <img src={logo} alt="Flexed Arm" width="50" />
           </div>
+
           <Switch>
             <Route
               exact
@@ -148,7 +150,11 @@ export class App extends Component {
                 />
               )}
             />
-            <Route exact path="/exercises/:id" component={ExerciseDetail} />
+            <Route
+              exact
+              path="/exercises/:id"
+              render={() => <ExerciseDetail />}
+            />
           </Switch>
         </main>
       </Router>

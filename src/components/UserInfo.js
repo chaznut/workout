@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 class UserInfo extends Component {
   render() {
-    const { values, handleChange, buttonDisabled } = this.props;
+    const { handleChange, buttonDisabled } = this.props;
 
     return (
       <div>
