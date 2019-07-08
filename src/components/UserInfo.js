@@ -1,38 +1,19 @@
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import TextField from 'material-ui/TextField';
-import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
-export class UserInfo extends Component {
-  continue = e => {
-    e.preventDefault();
-    this.props.nextStep();
-  };
-
+class UserInfo extends Component {
   render() {
-    const { values, handleChange } = this.props;
+    const { handleChange, buttonDisabled } = this.props;
 
     return (
-      <MuiThemeProvider>
-        <div>
-          <TextField
-            hintText="Enter Your Name"
-            floatingLabelText="Name"
-            onChange={handleChange('name')}
-            defaultValue={values.name}
-          />
-          <br />
-          <Button
-            variant="contained"
-            color="primary"
-            style={styles.button}
-            onClick={this.continue}
-            size="large"
-          >
+      <div>
+        <input placeholder="Enter Your Name" onChange={handleChange('name')} />
+        <Link to="/workoutType">
+          <button disabled={buttonDisabled} style={styles.button}>
             Continue
-          </Button>
-        </div>
-      </MuiThemeProvider>
+          </button>
+        </Link>
+      </div>
     );
   }
 }

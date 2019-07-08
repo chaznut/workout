@@ -1,54 +1,36 @@
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import Select from '@material-ui/core/Select';
-import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
 export class WorkoutType extends Component {
-  continue = e => {
-    e.preventDefault();
-    this.props.nextStep();
-  };
-
-  back = e => {
-    e.preventDefault();
-    this.props.prevStep();
-  };
-
   render() {
     const { values, handleChange } = this.props;
 
     return (
-      <MuiThemeProvider>
-        <div>
-          <InputLabel htmlFor="age-simple">Select Type of Workout</InputLabel>
-          <Select
-            value={values.workoutType}
-            onChange={handleChange('workoutType')}
-          >
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
-            <MenuItem value="Chest">Chest</MenuItem>
-            <MenuItem value="Back">Back</MenuItem>
-            <MenuItem value="Shoulders">Shoulders</MenuItem>
-            <MenuItem value="Arms">Arms</MenuItem>
-            <MenuItem value="Legs">Legs</MenuItem>
-            <MenuItem value="Abs">Abs</MenuItem>
-          </Select>
-          <br />
-          <Button
-            variant="contained"
-            color="primary"
-            size="large"
-            style={styles.button}
-            onClick={this.continue}
-          >
+      <div>
+        <label htmlFor="workoutType">Select Type of Workout</label>
+        <select
+          value={values.workoutType}
+          onChange={handleChange('workoutType')}
+        >
+          <option value="Chest">Chest</option>
+          <option value="Back">Back</option>
+          <option value="Shoulders">Shoulders</option>
+          <option value="Arms">Arms</option>
+          <option value="Legs">Legs</option>
+          <option value="Abs">Abs</option>
+        </select>
+        <br />
+        <Link to="/">
+          <button style={styles.button} onClick={this.back}>
+            Back
+          </button>
+        </Link>
+        <Link to="/exerciseNumber">
+          <button style={styles.button} onClick={this.continue}>
             Continue
-          </Button>
-        </div>
-      </MuiThemeProvider>
+          </button>
+        </Link>
+      </div>
     );
   }
 }

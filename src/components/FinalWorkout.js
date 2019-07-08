@@ -1,37 +1,37 @@
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import { List, ListItem } from 'material-ui/List';
-import Button from '@material-ui/core/Button';
+import Exercise from './Exercise';
+import { Link } from 'react-router-dom';
 
 export class FinalWorkout extends Component {
   componentDidMount() {
-    this.props.handleSubmit();
+    if (this.props.workoutArray.length === 0) {
+      this.props.handleSubmit();
+    }
   }
 
   render() {
     return (
-      <MuiThemeProvider>
-        <div className="workoutContainer">
-          <h3>{this.props.name}, here is your workout:</h3>
-          <List>
-            {this.props.workout.map(exercise => (
-              <ListItem
-                key={this.props.workout.indexOf(exercise)}
-                primaryText={exercise}
-              />
-            ))}
-          </List>
-          <Button
-            size="large"
-            variant="contained"
-            color="primary"
-            className="shuffleButton"
-            onClick={this.props.onClick}
-          >
-            Shuffle
-          </Button>
-        </div>
-      </MuiThemeProvider>
+      <div className="workoutContainer">
+        <h3>{this.props.name}, here is your workout:</h3>
+        <ul>
+          {this.props.workout.map(exercise => (
+            <Exercise
+              key={this.props.workout.indexOf(exercise)}
+              name={exercise.name}
+              exerciseUrl={exercise.url}
+              videoUrl={exercise.videoUrl}
+            />
+          ))}
+        </ul>
+        <button className="shuffleButton" onClick={this.props.onClick}>
+          Shuffle
+        </button>
+        <Link to="/">
+          <button className="shuffleButton" onClick={this.props.handleReset}>
+            Reset
+          </button>
+        </Link>
+      </div>
     );
   }
 }
