@@ -19,11 +19,11 @@ export class ExerciseNumber extends Component {
           <option value="5">Five</option>
           <option value="6">Six</option>
         </select>
-        <Link to="/finalWorkout">
-          <button label="Continue">Continue</button>
-        </Link>
         <Link to="/workoutType">
           <button label="Continue">Back</button>
+        </Link>
+        <Link to="/finalWorkout">
+          <button label="Continue">Continue</button>
         </Link>
       </div>
     );
