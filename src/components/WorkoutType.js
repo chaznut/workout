@@ -19,26 +19,15 @@ export class WorkoutType extends Component {
           <option value="Legs">Legs</option>
           <option value="Abs">Abs</option>
         </select>
-        <br />
-        <Link to="/">
-          <button style={styles.button} onClick={this.back}>
-            Back
-          </button>
-        </Link>
         <Link to="/exerciseNumber">
-          <button style={styles.button} onClick={this.continue}>
-            Continue
-          </button>
+          <button onClick={this.continue}>Continue</button>
+        </Link>
+        <Link to="/">
+          <button onClick={this.back}>Back</button>
         </Link>
       </div>
     );
   }
 }
-
-const styles = {
-  button: {
-    margin: 15
-  }
-};
 
 export default WorkoutType;

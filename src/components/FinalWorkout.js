@@ -15,12 +15,14 @@ export class FinalWorkout extends Component {
         <h3>{this.props.name}, here is your workout:</h3>
         <ul>
           {this.props.workout.map(exercise => (
-            <Exercise
-              key={this.props.workout.indexOf(exercise)}
-              name={exercise.name}
-              exerciseUrl={exercise.url}
-              videoUrl={exercise.videoUrl}
-            />
+            <li>
+              <Exercise
+                key={this.props.workout.indexOf(exercise)}
+                name={exercise.name}
+                exerciseUrl={exercise.url}
+                videoUrl={exercise.videoUrl}
+              />
+            </li>
           ))}
         </ul>
         <button className="shuffleButton" onClick={this.props.onClick}>

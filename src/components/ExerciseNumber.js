@@ -19,25 +19,15 @@ export class ExerciseNumber extends Component {
           <option value="5">Five</option>
           <option value="6">Six</option>
         </select>
-        <Link to="/workoutType">
-          <button label="Continue" style={styles.button}>
-            Back
-          </button>
-        </Link>
         <Link to="/finalWorkout">
-          <button label="Continue" style={styles.button}>
-            Continue
-          </button>
+          <button label="Continue">Continue</button>
+        </Link>
+        <Link to="/workoutType">
+          <button label="Continue">Back</button>
         </Link>
       </div>
     );
   }
 }
-
-const styles = {
-  button: {
-    margin: 15
-  }
-};
 
 export default ExerciseNumber;
