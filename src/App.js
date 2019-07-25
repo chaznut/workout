@@ -1,4 +1,4 @@
-import React, { Component, lazy, Suspense } from 'react';
+import React, { Component} from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import UserInfo from './components/UserInfo';
@@ -16,7 +16,6 @@ import arms from './data/arms';
 import shoulders from './data/shoulders';
 import chest from './data/chest';
 import back from './data/back';
-import Exercise from './components/Exercise';
 
 export class App extends Component {
   constructor(props) {
