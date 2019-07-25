@@ -12,7 +12,10 @@ export class FinalWorkout extends Component {
   render() {
     return (
       <div className="workoutContainer">
-        <h3>{this.props.name}, here is your workout:</h3>
+        <h3>
+          {this.props.name}, here is your workout, tap exercise for example
+          video:
+        </h3>
         <ul>
           {this.props.workout.map(exercise => (
             <li key={this.props.workout.indexOf(exercise)}>
