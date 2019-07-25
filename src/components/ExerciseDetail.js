@@ -3,14 +3,17 @@ import { withRouter } from 'react-router-dom';
 import styles from '../App.module.scss';
 
 const ExerciseDetail = props => (
-  <div className={styles.iframeContainer}>
+  <div >
     <h3>{props.location.state.videoInfo.name}</h3>
-    <iframe
-      title={props.location.state.videoInfo.name}
-      src={props.location.state.videoInfo.videoUrl}
-      frameBorder="0"
-      allowFullScreen
-    />
+    <video autoplay controls width="320" height="320">
+
+
+    <source src="https://videos.bodybuilding.com/video/mp4/28000/28871m.mp4"
+            type="video/mp4"/>
+
+    Sorry, your device doesn't support embedded videos.
+    </video>
+
     <button onClick={() => props.history.goBack()}>Back</button>
   </div>
 );
