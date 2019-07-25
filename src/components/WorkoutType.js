@@ -19,11 +19,11 @@ export class WorkoutType extends Component {
           <option value="Legs">Legs</option>
           <option value="Abs">Abs</option>
         </select>
-        <Link to="/exerciseNumber">
-          <button onClick={this.continue}>Continue</button>
-        </Link>
         <Link to="/">
           <button onClick={this.back}>Back</button>
+        </Link>
+        <Link to="/exerciseNumber">
+          <button onClick={this.continue}>Continue</button>
         </Link>
       </div>
     );
