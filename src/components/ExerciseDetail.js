@@ -1,10 +1,11 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import styles from '../App.module.scss';
 
 const ExerciseDetail = props => (
-  <div>
+  <div className={styles.iframeContainer} >
     <h3>{props.location.state.videoInfo.name}</h3>
-    <iframe src={props.location.state.videoInfo.videoUrl} frameBorder="0" />
+    <iframe title={props.location.state.videoInfo.name} src={props.location.state.videoInfo.videoUrl} frameBorder="0" />
     <button onClick={() => props.history.goBack()}>Back</button>
   </div>
 );
