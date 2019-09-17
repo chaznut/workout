@@ -5,12 +5,16 @@ import styles from '../App.module.scss';
 const ExerciseDetail = props => (
   <div className={styles.iframeContainer}>
     <h3>{props.location.state.videoInfo.name}</h3>
-    <iframe
+
+    <video autoPlay controls width="320" height="320">
+
       title={props.location.state.videoInfo.name}
-      src={props.location.state.videoInfo.videoUrl}
-      frameBorder="0"
-      allowFullScreen
-    />
+      <source src={props.location.state.videoInfo.videoUrl}
+        type="video/mp4" />
+
+      Sorry, your device doesn't support embedded videos.
+  </video>
+
     <button onClick={() => props.history.goBack()}>Back</button>
   </div>
 );
