@@ -1,57 +1,57 @@
 const chest = [
   {
-    type: 'compound',
-    name: 'Barbell Flat Bench Press',
-    url: '/flat-barbell-bench-press',
-    videoUrl: 'https://www.youtube.com/embed/RsobeWfbBcY'
+    type: "compound",
+    name: "Barbell Flat Bench Press",
+    url: "/flat-barbell-bench-press",
+    videoUrl: "https://videos.bodybuilding.com/video/mp4/54000/54651m.mp4"
   },
   {
-    type: 'compound',
-    name: 'Barbell Incline Bench Press',
-    url: '/incline-barbell-bench-press',
-    videoUrl: 'https://www.youtube.com/embed/8YgkJN0gmNM'
+    type: "compound",
+    name: "Barbell Incline Bench Press",
+    url: "/incline-barbell-bench-press",
+    videoUrl: "https://videos.bodybuilding.com/video/mp4/116000/117671m.mp4"
   },
   {
-    type: 'compound',
-    name: 'Dumbbell Flat Bench Press',
-    url: '/flat-dumbbell-bench-press',
-    videoUrl: 'https://www.youtube.com/embed/Vc63DPUoA40'
+    type: "compound",
+    name: "Dumbbell Flat Bench Press",
+    url: "/flat-dumbbell-bench-press",
+    videoUrl: "https://videos.bodybuilding.com/video/mp4/28000/28871m.mp4"
   },
   {
-    type: 'compound',
-    name: 'Dumbbell Incline Bench Press',
-    url: '/incline-dumbbell-bench-press',
-    videoUrl: 'https://www.youtube.com/embed/DnV3R4vp3K0'
+    type: "compound",
+    name: "Dumbbell Incline Bench Press",
+    url: "/incline-dumbbell-bench-press",
+    videoUrl: "https://videos.bodybuilding.com/video/mp4/32000/32131m.mp4"
   },
   {
-    type: 'compound',
-    name: 'Dumbbell Decline Bench Press',
-    url: '/decline-dumbbell-bench-press',
-    videoUrl: 'https://www.youtube.com/embed/Pf1nDoqx_1A'
+    type: "compound",
+    name: "Dumbbell Decline Bench Press",
+    url: "/decline-dumbbell-bench-press",
+    videoUrl: "https://videos.bodybuilding.com/video/mp4/32000/32131m.mp4"
   },
   {
-    type: 'accessory',
-    name: 'Chest Dips',
-    url: '/chest-dips',
-    videoUrl: 'https://www.youtube.com/embed/4la6BkUBLgo'
+    type: "accessory",
+    name: "Chest Dips",
+    url: "/chest-dips",
+    videoUrl: "https://videos.bodybuilding.com/video/mp4/32000/32201m.mp4"
   },
   {
-    type: 'accessory',
-    name: 'Flat Dumbbell Flyes',
-    url: '/dumbbell-flyes',
-    videoUrl: 'https://www.youtube.com/embed/QwuUZ5wgQOk'
+    type: "accessory",
+    name: "Flat Dumbbell Flyes",
+    url: "/dumbbell-flyes",
+    videoUrl: "https://videos.bodybuilding.com/video/mp4/28000/28921m.mp4"
   },
   {
-    type: 'accessory',
-    name: 'Push Up',
-    url: '/push-up',
-    videoUrl: 'https://www.youtube.com/embed/XIHO5t_VBPQ'
+    type: "accessory",
+    name: "Push Up",
+    url: "/push-up",
+    videoUrl: "https://videos.bodybuilding.com/video/mp4/30000/30191m.mp4"
   },
   {
-    type: 'accessory',
-    name: 'Dumbbell Pullover',
-    url: '/dumbbell-pullover',
-    videoUrl: 'https://www.youtube.com/embed/4B-BrBH17uM'
+    type: "accessory",
+    name: "Dumbbell Pullover",
+    url: "/dumbbell-pullover",
+    videoUrl: "https://videos.bodybuilding.com/video/mp4/54000/54771m.mp4"
   }
 ];
 
